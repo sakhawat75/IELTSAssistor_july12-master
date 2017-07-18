@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team_uganda.ieltsassistor.MainActivity"
+    android:orientation="vertical">
+
+
+
+    <Button
+        android:id="@+id/ielts_calculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="See your bandscore"
+        android:background="#aac"
+        android:onClick="calculate"
+         />
+
+    <Button
+        android:id="@+id/ielts_location_finder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Find nearest exam centre"
+        android:background="#aac"
+        android:onClick="findLoc"
+         />
+
+    <Button
+        android:id="@+id/ielts_mockTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Give a full mock test"
+        android:background="#aac"
+        android:onClick="giveTest"
+         />
+
+    <Button
+        android:id="@+id/ielts_rareBooks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#aac"
+        android:text="Cart books free"
+        android:onClick="bookStore"
+        />
+
+    <Button
+        android:id="@+id/ielts_tipOfTheDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Click for tips"
+        android:background="#aac"
+        android:onClick="findTips"
+         />
+
+    <Button
+        android:id="@+id/button_signinOrSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Sign up/Sign In"
+        android:background="#bac"
+        android:onClick="doSigninOrUp" />
+
+</LinearLayout>

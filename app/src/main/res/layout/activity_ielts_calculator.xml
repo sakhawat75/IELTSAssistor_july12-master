@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team_uganda.ieltsassistor.IeltsCalculator"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to know your band score!!!"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textAppearance="@color/colorPrimaryDark"
+        android:background="#6d4d4d"
+        android:layout_weight="1"
+
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Listening:"
+        android:textAlignment="gravity"
+        android:layout_weight="1"/>
+
+    <EditText
+        android:id="@+id/listeningScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="3-40"
+        android:layout_weight="1"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Reading:"
+        android:textAlignment="gravity"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/readingScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="3-40"
+        android:layout_weight="1"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Writing:"
+        android:layout_weight="1"/>
+    <Spinner
+        android:id="@+id/select_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+    </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Speaking:"
+            android:layout_weight="1"/>
+        <Spinner
+            android:id="@+id/select_score_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/getListeningScore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Listening Score"
+        android:onClick="clickListeingScore"
+        android:layout_weight="1"
+        />
+    <Button
+        android:id="@+id/getReadingScore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Reading Score"
+        android:onClick="clickReadingScore"
+        android:layout_weight="1"
+        />
+    </LinearLayout>
+
+
+
+    <!--<Spinner>-->
+        <!--android:id="@+id/Select_Score"-->
+        <!--android:textAlignment="inherit"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="10dp"-->
+
+    <!--</Spinner>-->
+
+    <Button
+        android:text="Click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="calc"
+        android:layout_weight="1"/>
+
+</LinearLayout>

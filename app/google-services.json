@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "69283392008",
+    "firebase_url": "https://ieltsassistor.firebaseio.com",
+    "project_id": "ieltsassistor",
+    "storage_bucket": "ieltsassistor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69283392008:android:5a6aee98e88741dd",
+        "android_client_info": {
+          "package_name": "team_uganda.ieltsassistor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69283392008-iu3me2v55faqskgdcav9kbub66hff2kd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "team_uganda.ieltsassistor",
+            "certificate_hash": "cba8888e40f53b1dce0e654f9ed11b3585a51f16"
+          }
+        },
+        {
+          "client_id": "69283392008-pgichn9602hg0udabqpboc6j5hm66af1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgEPRISLX5nCYVQqoW4YLQPHV-TItmDHs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69283392008-pgichn9602hg0udabqpboc6j5hm66af1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team_uganda.ieltsassistor.MockTest">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ekano sample hishabe 4 ta skill or upre kisu  question thakbo. 2 ta kaj kora jaibo 1) qstn answer korbo and lo
+                        galog ans paibo 2) database o full mock test deua oibo, download korea ans dibo answer sheet dw korew milaibo"
+        />
+
+</android.support.constraint.ConstraintLayout>
