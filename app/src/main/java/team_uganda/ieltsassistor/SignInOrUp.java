@@ -25,6 +25,7 @@ public class SignInOrUp  extends AppCompatActivity implements View.OnClickListen
 
     private EditText editTextEmail;
     private EditText editTextPassword;
+    private EditText editTextConfirmPassword;
     private Button buttonSignup;
     private ProgressDialog progressDialog;
     private TextView textViewSignin;
@@ -45,6 +46,7 @@ public class SignInOrUp  extends AppCompatActivity implements View.OnClickListen
 
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        editTextConfirmPassword = (EditText) findViewById(R.id.editTextConfirmPassword);
         textViewSignin = (TextView) findViewById(R.id.textViewSignin);
 
         buttonSignup = (Button) findViewById(R.id.buttonSignup);
@@ -58,6 +60,7 @@ public class SignInOrUp  extends AppCompatActivity implements View.OnClickListen
     private void registerUser() {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+        String confirmPassword = editTextConfirmPassword.getText().toString().trim();
 
         if(TextUtils.isEmpty(email)) {
             Toast.makeText(this,"Please enter email", Toast.LENGTH_LONG).show();
@@ -66,6 +69,12 @@ public class SignInOrUp  extends AppCompatActivity implements View.OnClickListen
 
         if(TextUtils.isEmpty(password)) {
             Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(!password.equals(confirmPassword)) {
+            Toast.makeText(this, "Please enter same password\nfor both field", Toast.LENGTH_SHORT).show();
+            return;
         }
 
         progressDialog.setMessage("Registering Please Wait...");
