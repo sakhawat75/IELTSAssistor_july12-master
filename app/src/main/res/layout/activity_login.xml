@@ -46,6 +46,11 @@
             android:layout_margin="15dp"
             android:text="Signin" />
 
+        <com.google.android.gms.common.SignInButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/googleButton" ></com.google.android.gms.common.SignInButton>
+
         <TextView
             android:text="Not have an account? Signup Here"
             android:id="@+id/textViewSignUp"
