@@ -146,7 +146,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Toast.makeText(this, "Google Sign In", Toast.LENGTH_SHORT).show();
             }
         }
-        progressDialog.dismiss();
     }
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
@@ -173,7 +172,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             // updateUI(null);
                         }
 
-                        // ...
+                        progressDialog.dismiss();
                     }
                 });
     }

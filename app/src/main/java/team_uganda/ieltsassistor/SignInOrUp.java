@@ -135,6 +135,7 @@ public class SignInOrUp  extends AppCompatActivity implements View.OnClickListen
         startActivityForResult(signInIntent, RC_SIGN_IN);
         progressDialog.setMessage("Signin with Google Please Wait...");
         progressDialog.show();
+
     }
 
     @Override
@@ -153,7 +154,7 @@ public class SignInOrUp  extends AppCompatActivity implements View.OnClickListen
                 Toast.makeText(this, "Google Sign In", Toast.LENGTH_SHORT).show();
             }
         }
-        progressDialog.dismiss();
+
     }
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
@@ -180,7 +181,7 @@ public class SignInOrUp  extends AppCompatActivity implements View.OnClickListen
                             // updateUI(null);
                         }
 
-                        // ...
+                        progressDialog.dismiss();
                     }
                 });
     }

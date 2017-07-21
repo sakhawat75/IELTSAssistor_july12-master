@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void doSigninOrUp(View v)
     {
-        Toast.makeText(getApplicationContext(), "Going to SignIn/SignUp activity", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, SignInOrUp.class);
         startActivity(intent);
     }

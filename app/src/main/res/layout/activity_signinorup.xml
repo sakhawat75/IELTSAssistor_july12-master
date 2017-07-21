@@ -27,7 +27,7 @@
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="13dp"
             android:hint="Enter email"
             android:inputType="textEmailAddress" />
 
@@ -35,7 +35,7 @@
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="13dp"
             android:hint="Enter Password"
             android:inputType="textPassword" />
 
@@ -43,7 +43,7 @@
             android:id="@+id/editTextConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="13dp"
             android:hint="Confirm Password"
             android:inputType="textPassword" />
 
@@ -51,21 +51,28 @@
             android:id="@+id/buttonSignup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="13dp"
             android:text="Signup" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Or" />
 
         <com.google.android.gms.common.SignInButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/googleButton"></com.google.android.gms.common.SignInButton>
+            android:id="@+id/googleButton"
+            android:layout_margin="17dp" ></com.google.android.gms.common.SignInButton>
 
         <TextView
             android:text="Already Registered? Signin Here"
             android:id="@+id/textViewSignin"
             android:textAlignment="center"
-            android:layout_margin="15dp"
+            android:layout_margin="22dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
