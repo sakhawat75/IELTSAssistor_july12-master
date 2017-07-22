@@ -151,7 +151,8 @@ public class SignInOrUp  extends AppCompatActivity implements View.OnClickListen
                 firebaseAuthWithGoogle(account);
             } else {
                 // Google Sign In failed, update UI appropriately
-                Toast.makeText(this, "Google Sign In", Toast.LENGTH_SHORT).show();
+                progressDialog.dismiss();
+                Toast.makeText(this, "Google Sign In is Failed", Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -176,7 +177,7 @@ public class SignInOrUp  extends AppCompatActivity implements View.OnClickListen
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
-                            Toast.makeText(SignInOrUp.this, "Authentication failed.",
+                            Toast.makeText(SignInOrUp.this, "Authentication failed.\nMaybe Problem with your internet connection",
                                     Toast.LENGTH_SHORT).show();
                             // updateUI(null);
                         }
