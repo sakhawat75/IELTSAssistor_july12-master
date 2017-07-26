@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_book_one"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="@dimen/layout_vertical_margin"
+    android:paddingBottom="@dimen/layout_vertical_margin"
+    android:paddingLeft="@dimen/layout_horizontal_margin"
+    android:paddingRight="@dimen/layout_horizontal_margin"
     tools:context="team_uganda.ieltsassistor.BookOne">
 
-    <WebView
+    <com.github.barteksc.pdfviewer.PDFView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/webview1">
+        android:layout_height="match_parent"
+        android:id="@+id/pdfView" />
 
-    </WebView>
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
