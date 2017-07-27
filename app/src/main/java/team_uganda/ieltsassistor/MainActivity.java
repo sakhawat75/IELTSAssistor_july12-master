@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void findTips(View v)
     {
-        Toast.makeText(getApplicationContext(), "Tips will be added later", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, PopupTips.class);
+        startActivity(intent);
 
     }
 

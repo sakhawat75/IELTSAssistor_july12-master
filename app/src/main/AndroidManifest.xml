@@ -27,7 +27,13 @@
         <activity android:name=".BookTwo" />
         <activity android:name=".SignInOrUp" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+
+        <activity android:name=".PopupTips"
+            android:theme="@style/AppTheme.CustomTheme"
+            android:label="IELTS Tips">
+        </activity>
+
     </application>
 
 </manifest>
