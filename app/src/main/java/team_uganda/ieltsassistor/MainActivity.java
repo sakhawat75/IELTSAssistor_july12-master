@@ -1,8 +1,10 @@
 package team_uganda.ieltsassistor;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -58,7 +60,20 @@ public class MainActivity extends AppCompatActivity {
     }
     public void findTips(View v)
     {
-        Toast.makeText(getApplicationContext(), "Tips will be added later", Toast.LENGTH_SHORT).show();
+        AlertDialog.Builder mDialog = new AlertDialog.Builder(MainActivity.this);
+        View view = getLayoutInflater().inflate(R.layout.tips_dialog, null);
+        Button buttonAlertDismiss = (Button) view.findViewById(R.id.buttonAlertDismiss);
+
+        mDialog.setView(view);
+        final AlertDialog dialog = mDialog.create();
+        dialog.show();
+
+        buttonAlertDismiss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
 
     }
 
