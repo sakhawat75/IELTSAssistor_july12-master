@@ -69,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView5"
-        android:text="All tips list"
+        android:text="Press and Hold list item to update or delete"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/buttonUploadTips" />

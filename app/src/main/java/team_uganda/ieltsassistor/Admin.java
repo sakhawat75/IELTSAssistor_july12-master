@@ -175,7 +175,11 @@ public class Admin extends AppCompatActivity {
                     if(!TextUtils.isEmpty(body)) {
                         updateTip(tipId, title, body);
                         b.dismiss();
+                    } else {
+                        Toast.makeText(Admin.this, "please insert some text", Toast.LENGTH_SHORT).show();
                     }
+                } else {
+                    Toast.makeText(Admin.this, "please insert some text", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -184,9 +188,8 @@ public class Admin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                /*
-                * we will code this method to delete the artist
-                * */
+                deleteTip(tipId);
+                b.dismiss();
 
             }
         });
@@ -199,6 +202,14 @@ public class Admin extends AppCompatActivity {
         Tips tip = new Tips(tipId, title, body);
         dr.setValue(tip);
         Toast.makeText(this, "Tip Updated Successfully", Toast.LENGTH_SHORT).show();
+
+        return true;
+    }
+
+    private boolean deleteTip(String tipId) {
+        DatabaseReference dr = FirebaseDatabase.getInstance().getReference("Tips").child(tipId);
+        dr.removeValue();
+        Toast.makeText(this, "Tip Deleted Successfully", Toast.LENGTH_SHORT).show();
 
         return true;
     }
