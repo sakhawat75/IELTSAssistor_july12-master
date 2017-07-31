@@ -41,7 +41,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         buttonBackToMain.setOnClickListener(this);
 
         String admin = user.getEmail();
-        if(admin.equals("junedrockz1@gmail.com") || admin.equals("haidernuur@gmail.com)")) {
+        if(admin.equals("hussainjuned99@gmail.com") || admin.equals("haidernuur@gmail.com)")) {
             Intent intent = new Intent(getApplicationContext(), Admin.class);
             startActivity(intent);
             finish();

@@ -42,7 +42,7 @@ public class PopupTips extends AppCompatActivity {
 
         if(firebaseAuth.getCurrentUser() == null){
             Toast.makeText(this, "You need to Signin first to\nView Tips", Toast.LENGTH_SHORT).show();
-            //finish();
+            finish();
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         }
 
