@@ -1,16 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="team_uganda.ieltsassistor.ExamCentre">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        tools:context="team_uganda.ieltsassistor.ExamCentre">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="eikhaner beyapar ta hobe - fisrt target: sylhet e je jaygay thakuk, 2 ta IELTS centre Map e show korbe
-                        pore target rakbo bangladesher je jaygay thakuk, nearest 2 ta map e show korbe"
-        />
 
-</android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Warning: Click GET CURRENT LOCATION first and wait a few seconds"/>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_below="@id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Current Location"
+            android:onClick="configureButton"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <Button
+            android:id="@+id/button2"
+            android:layout_below="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find the path"
+            android:onClick="go"
+            android:layout_centerHorizontal="true"
+
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Coordinates: "
+            android:textAppearance="@color/colorPrimary"
+            android:id="@+id/textView"
+            android:textSize="30dp"
+            android:layout_below="@+id/button"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@color/colorWhite"
+            android:textColor="@color/colorWhite"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="From Here, Your nearest IELTS exam centre is"
+
+            android:id="@+id/textView2"
+            android:textSize="30dp"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="#090"
+            android:textColor="#999fff"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+
+            android:id="@+id/textView3"
+            android:textSize="30dp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@color/colorWhite"
+            android:textColor="#321fff"
+            />
+
+
+
+    </RelativeLayout>
