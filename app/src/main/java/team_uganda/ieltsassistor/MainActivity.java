@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     //button class taki object nilam 5 tar laagi
     Button calculateScore;
     Button locationFinder;
-    Button testGiver;
+    Button trainner;
     Button bookStorage;
     Button tipOfTheDay;
     Button signinOrUp;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         //object gula findViewByid di initialize/ assign korlam
         calculateScore = (Button) findViewById(R.id.ielts_calculator);
         locationFinder = (Button) findViewById(R.id.ielts_location_finder);
-        testGiver = (Button) findViewById(R.id.ielts_mockTest);
+        trainner = (Button) findViewById(R.id.ielts_trainning);
         bookStorage = (Button) findViewById(R.id.ielts_rareBooks);
         tipOfTheDay = (Button) findViewById(R.id.ielts_tipOfTheDay);
         signinOrUp = (Button) findViewById(R.id.button_signinOrSignup);
@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ExamCentre.class);
         startActivity(intent);
     }
-    public void giveTest(View v)
+    public void doTrainning (View v)
     {
-        Toast.makeText(getApplicationContext(), "Going to Mock Test activity", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, MockTest.class);
+        Toast.makeText(getApplicationContext(), "Going to Train Yourself activity", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, TrainYourself.class);
         startActivity(intent);
     }
     public void bookStore(View v)

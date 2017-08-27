@@ -23,7 +23,7 @@ public class BookOne extends AppCompatActivity {
         pdfView = (PDFView) findViewById(R.id.pdfView);
 
         new RetrievePDFStream()
-                .execute("https://firebasestorage.googleapis.com/v0/b/ieltsassistor.appspot.com/o/IELTS_Target%20band_7_2.pdf?alt=media&token=0f6ea2fc-fa83-4535-a611-d28df0690c8b");
+ .execute("https://firebasestorage.googleapis.com/v0/b/ieltsassistor.appspot.com/o/book1.pdf?alt=media&token=82c741a4-67a1-48e5-a28b-fb6061a84149");
     }
 
     class RetrievePDFStream extends AsyncTask<String, Void, InputStream> {

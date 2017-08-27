@@ -40,7 +40,7 @@ public class ExamCentre extends AppCompatActivity {
         setContentView(R.layout.activity_exam_centre);
 
         //initialize the four objects
-        button = (Button) findViewById(R.id.button);
+        button = (Button) findViewById(R.id.buttonReading);
         //button2 = (Button) findViewById(R.id.button2);
 
         textView = (TextView) findViewById(R.id.textView);
