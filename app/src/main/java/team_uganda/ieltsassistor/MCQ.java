@@ -33,7 +33,7 @@ public class MCQ extends Activity {
     private int correctAnswer = 0;
     private int questonNumber = 0;
     private int passageNumber = 0;
-    private int totalQuestion = myMcq.getTotalQuestionCount();
+    private int totalQuestion = myMcq.getTotalQuestionCount(passageNumber);
     private int totalPassage = myMcq.getTotalPassageCount();
 
     @Override
@@ -64,6 +64,8 @@ public class MCQ extends Activity {
             textViewPassage.setText(myMcq.getPassage(passageNumber));
             updateQuestion();
         }
+
+
 
 
 
@@ -124,24 +126,35 @@ public class MCQ extends Activity {
             @Override
             public void onClick(View v) {
                 if(radioGroup.getCheckedRadioButtonId() == -1){
-                    Toast.makeText(MCQ.this, "Please Select an Item", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MCQ.this, "Please Select an answer", Toast.LENGTH_SHORT).show();
                 } else {
 
                     if(questonNumber < totalQuestion-1) {
                         questonNumber++;
                         updateQuestion();
-                        radioGroup.clearCheck();
+                        /*radioGroup.clearCheck();
                         textViewResult.setText("Please select an answer");
                         choice1.setTextColor(Color.BLACK);
                         choice2.setTextColor(Color.BLACK);
                         choice3.setTextColor(Color.BLACK);
                         choice4.setTextColor(Color.BLACK);
                         textViewExplanationTittle.setVisibility(View.GONE);
-                        textViewExplanation.setVisibility(View.GONE);
+                        textViewExplanation.setVisibility(View.GONE);*/
 
                     } else {
-                        Toast.makeText(MCQ.this, "No more question", Toast.LENGTH_SHORT).show();
-                        finish();
+
+                        if(passageNumber < totalPassage-1) {
+                            passageNumber++;
+                            questonNumber = 0;
+                            totalQuestion = myMcq.getTotalQuestionCount(passageNumber);
+                            textViewPassage.setText(myMcq.getPassage(passageNumber));
+
+                            updateQuestion();
+                        } else {
+                            Toast.makeText(MCQ.this, "No more question", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+
                     }
                 }
 
@@ -171,23 +184,35 @@ public class MCQ extends Activity {
 
 
     public void updateQuestion() {
-        textViewQuestion.setText(myMcq.getQuestion(questonNumber));
 
-        choice1.setText(myMcq.getChoice1(questonNumber));
-        choice2.setText(myMcq.getChoice2(questonNumber));
-        choice3.setText(myMcq.getChoice3(questonNumber));
-        choice4.setText(myMcq.getChoice4(questonNumber));
+        radioGroup.clearCheck();
 
-       correctAnswer = myMcq.getCorrectAnswer(questonNumber);
+        textViewQuestion.setText(myMcq.getQuestion(passageNumber, questonNumber));
+
+        choice1.setText(myMcq.getChoice1(passageNumber, questonNumber));
+        choice2.setText(myMcq.getChoice2(passageNumber, questonNumber));
+        choice3.setText(myMcq.getChoice3(passageNumber, questonNumber));
+        choice4.setText(myMcq.getChoice4(passageNumber, questonNumber));
+
+        choice1.setTextColor(Color.BLACK);
+        choice2.setTextColor(Color.BLACK);
+        choice3.setTextColor(Color.BLACK);
+        choice4.setTextColor(Color.BLACK);
+
+        textViewResult.setText("Please select an answer");
+        textViewExplanationTittle.setVisibility(View.GONE);
+        textViewExplanation.setVisibility(View.GONE);
+
+       correctAnswer = myMcq.getCorrectAnswer(passageNumber, questonNumber);
     }
 
     public void updateResultTextView(boolean correct) {
         if(correct) {
-            textViewResult.setText("Correct");
+            textViewResult.setText("Your Answer is Correct");
         } else {
-            textViewResult.setText("Incorrect");
+            textViewResult.setText("Your Answer is Incorrect");
         }
-        textViewExplanation.setText(myMcq.getExplanation(questonNumber));
+        textViewExplanation.setText(myMcq.getExplanation(passageNumber, questonNumber));
         textViewExplanationTittle.setVisibility(View.VISIBLE);
         textViewExplanation.setVisibility(View.VISIBLE);
     }

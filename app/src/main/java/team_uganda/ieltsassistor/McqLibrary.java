@@ -27,31 +27,49 @@ public class McqLibrary {
             "Third Passage"
     };
 
-    private String[] questions = {"Question 1. What did archaeologists in southern Germany discover?",
+    private String[][] questions = { {"Question 1. What did archaeologists in southern Germany discover?",
             "Question 2. Why did scientists suggested that those people were killed whilst running away?",
-            "Question 3. Why do human beings fight, according to the article?"
+            "Question 3. Why do human beings fight, according to the article?",
+            "Question 4. Which of the following phrases best describes the main aim of the Reading Passage?"
+            },
+
+            {"Question 1. ", "Question 2. ", "Question 3. "},
+            {"Question 1. ", "Question 2. ", "Question 3. "}
     };
 
-    private String[][] choices = {
+    private String[][][] choices = { {
             {" a) Remains of 34 dead animals",
-                " b) Graveyard containing 34 skeletons",
-                "c) Relics of early civilization",
-                "d) 9 adult males, 7 adult females and 16 children"},
+                    " b) Graveyard containing 34 skeletons",
+                    "c) Relics of early civilization",
+                    "d) 9 adult males, 7 adult females and 16 children"},
 
             {"a) Their skeletons showed signs of fatal trauma",
-                "b) There were 16 children",
-                "c) During that period organised group violence was very frequent",
-                "d) Their skeletons didn't show any signs of defensive wounds" },
+                    "b) There were 16 children",
+                    "c) During that period organised group violence was very frequent",
+                    "d) Their skeletons didn't show any signs of defensive wounds" },
 
             {"a) To describe fighting among different species",
-                "b) To intoduce principles of contemporary archaeology and its application",
-                "c) To introduce some relics of humans' warfare for further discussion whether violence is innate or not",
-                "d) To suggest ways of interperting humans' violence"}
+                    "b) To intoduce principles of contemporary archaeology and its application",
+                    "c) To introduce some relics of humans' warfare for further discussion whether violence is innate or not",
+                    "d) To suggest ways of interperting humans' violence"},
+            {"a) To describe fighting among different species",
+                    "b) To intoduce principles of contemporary archaeology and its application",
+                    "c) To introduce some relics of humans' warfare for further discussion whether violence is innate or not",
+                    "d) To suggest ways of interperting humans' violence" }
+    },
+            {
+                    {"alu :D", "Fotol :D", "Mula", "Gazor"}, {"pepe", "sosha", "begun", "korolla"},{"j","u","n","ed"}
+            },
+
+            {
+                    {"Alu :D", "potol :D", "bash", "Gira"}, {"badam", "chatni", "bhortha", "sidhdho"},{"j","u","n","ed"}
+            }
+
     };
 
-    private int[] correctAnswers = {b, d, c};
+    private int[][] correctAnswers = {{b, d, c, c}, {a, b, c}, {d,a,c}};
 
-    private String[] explanations = {"Answer A is incorrect because archaeologists discovered remains of people, \n" +
+    private String[][] explanations = { {"Answer A is incorrect because archaeologists discovered remains of people, \n" +
             "answer C is incorrect because nothing was said about early civilization,\n" +
             " answer D is incorrect because it doesn't mention that discovered people were dead.",
 
@@ -60,7 +78,17 @@ public class McqLibrary {
 
             "Althought answers A and B give true information, they are not the reasons why human beings fight. \n" +
                     "Answer D gives false information (fighting is never mentioned as instinct). \n" +
-                    "Answer C is correct (it is written directly in the last paragraph)."
+                    "Answer C is correct (it is written directly in the last paragraph).",
+
+            "The Reading Passage didn't give any information about fighting among different species. \n" +
+            "Though achaeologists were mentioned, nothing was written about archaeology. \n" +
+            "Humans' violence was not suggested to be interpreted, author only gave one reason of practising warfare. \n" +
+            "In the beginning of the text some relics of humans' warfare were intoduced, and the last sentence in this passage: \n" +
+            "\"But not everyone agrees that warfare is inbuilt\" gives start for further discussion whether violence is innate or not. "
+    },
+
+            {"Explanation 1", "Explanation 2","Explanation 3"},
+            {"Explanation 1", "Explanation 2","Explanation 3"}
     };
 
     //private String[] explanations = {"ex1", "ex2", "ex3", "ex4"};
@@ -75,44 +103,44 @@ public class McqLibrary {
         return s;
     }
 
-    public int getTotalQuestionCount () {
-        int i = questions.length;
+    public int getTotalQuestionCount (int passageIndex) {
+        int i = questions[passageIndex].length;
         return i;
     }
 
-    public String getQuestion(int index) {
-        String question = questions[index];
+    public String getQuestion(int passageIndex, int questionIndex) {
+        String question = questions[passageIndex][questionIndex];
         return question;
     }
 
-    public String getChoice1(int index) {
-        String choice1 = choices[index][0];
+    public String getChoice1(int passageIndex, int questionIndex) {
+        String choice1 = choices[passageIndex][questionIndex][0];
         return choice1;
     }
 
-     public String getChoice2(int index) {
-        String choice2 = choices[index][1];
+    public String getChoice2(int passageIndex, int questionIndex) {
+        String choice2 = choices[passageIndex][questionIndex][1];
         return choice2;
     }
 
-     public String getChoice3(int index) {
-        String choice3 = choices[index][2];
+    public String getChoice3(int passageIndex, int questionIndex) {
+        String choice3 = choices[passageIndex][questionIndex][2];
         return choice3;
     }
 
-     public String getChoice4(int index) {
-        String choice4 = choices[index][3];
+    public String getChoice4 (int passageIndex, int questionIndex) {
+        String choice4 = choices[passageIndex][questionIndex][3];
         return choice4;
     }
 
 
-    public int getCorrectAnswer(int index) {
-        int answer = correctAnswers[index];
+    public int getCorrectAnswer(int passageIndex, int questionIndex) {
+        int answer = correctAnswers[passageIndex][questionIndex];
         return answer;
     }
 
-    public String getExplanation(int index) {
-        String expla = explanations[index];
+    public String getExplanation(int passageIndex, int questionIndex) {
+        String expla = explanations[passageIndex][questionIndex];
         return expla;
     }
 
