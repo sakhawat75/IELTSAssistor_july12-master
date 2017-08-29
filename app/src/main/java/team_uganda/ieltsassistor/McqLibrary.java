@@ -37,22 +37,30 @@ public class McqLibrary {
             {"Question 1. ", "Question 2. ", "Question 3. "}
     };
 
-    private String[][][] choices = { {
-            {" a) Remains of 34 dead animals",
-                    " b) Graveyard containing 34 skeletons",
-                    "c) Relics of early civilization",
-                    "d) 9 adult males, 7 adult females and 16 children"},
+    private String[][][] choices = {
+            {
 
-            {"a) Their skeletons showed signs of fatal trauma",
+                    {
+                        " a) Remains of 34 dead animals",
+                        " b) Graveyard containing 34 skeletons",
+                        "c) Relics of early civilization",
+                        "d) 9 adult males, 7 adult females and 16 children"
+                    },
+
+            {
+                    "a) Their skeletons showed signs of fatal trauma",
                     "b) There were 16 children",
                     "c) During that period organised group violence was very frequent",
-                    "d) Their skeletons didn't show any signs of defensive wounds" },
+                    "d) Their skeletons didn't show any signs of defensive wounds"
+            },
 
-            {"a) To describe fighting among different species",
+            {
+                    "a) To describe fighting among different species",
                     "b) To intoduce principles of contemporary archaeology and its application",
                     "c) To introduce some relics of humans' warfare for further discussion whether violence is innate or not",
                     "d) To suggest ways of interperting humans' violence"},
-            {"a) To describe fighting among different species",
+            {
+                    "a) To describe fighting among different species",
                     "b) To intoduce principles of contemporary archaeology and its application",
                     "c) To introduce some relics of humans' warfare for further discussion whether violence is innate or not",
                     "d) To suggest ways of interperting humans' violence" }
@@ -83,7 +91,7 @@ public class McqLibrary {
             "The Reading Passage didn't give any information about fighting among different species. \n" +
             "Though achaeologists were mentioned, nothing was written about archaeology. \n" +
             "Humans' violence was not suggested to be interpreted, author only gave one reason of practising warfare. \n" +
-            "In the beginning of the text some relics of humans' warfare were intoduced, and the last sentence in this passage: \n" +
+            "In the beginning of the text some relics of humans' warfare were introduced, and the last sentence in this passage: \n" +
             "\"But not everyone agrees that warfare is inbuilt\" gives start for further discussion whether violence is innate or not. "
     },
 

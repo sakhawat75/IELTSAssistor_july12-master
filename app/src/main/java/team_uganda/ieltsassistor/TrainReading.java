@@ -9,6 +9,7 @@ import android.widget.Button;
 public class TrainReading extends Activity implements View.OnClickListener {
 
     private Button buttonMCQ;
+    private Button buttonListOfHeadings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,8 +17,10 @@ public class TrainReading extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_train_reading);
 
         buttonMCQ = (Button) findViewById(R.id.buttonMCQ);
+        buttonListOfHeadings = (Button)findViewById(R.id.buttonListOfHeadings);
 
         buttonMCQ.setOnClickListener(this);
+        buttonListOfHeadings.setOnClickListener(this);
     }
 
     @Override
@@ -26,7 +29,14 @@ public class TrainReading extends Activity implements View.OnClickListener {
         if (v.getId() == R.id.buttonMCQ) {
             Intent intent = new Intent(getApplicationContext(), MCQ.class);
             startActivity(intent);
+
             //finish();
         }
+        else if(v.getId() == R.id.buttonListOfHeadings){
+            Intent intent = new Intent(getApplicationContext(), ListOfHeadings.class);
+            startActivity(intent);
+        }
+
+
     }
 }
