@@ -65,7 +65,7 @@ public class ExamCentre extends AppCompatActivity {
                 try {
                     List<android.location.Address> addresses  = geocoder.getFromLocation(lattitude,longitude, 1);
                     textView.append("\n " + "Your Current location: " + addresses.get(0).getAddressLine(0));
-                    textView.setBackgroundColor(getResources().getColor(R.color.colorMajenda));
+                    textView.setBackgroundColor(getResources().getColor(R.color.colorTeal));
                     string += "\n " +  "Your location is: " + location.getLatitude() + " " + location.getLongitude();
                     Toast.makeText(getApplicationContext(), "Your " + string, Toast.LENGTH_LONG).show();
                 } catch (IOException e) {

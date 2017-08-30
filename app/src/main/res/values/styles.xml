@@ -14,4 +14,12 @@
         <item name="colorPrimary">#eed369</item>
     </style>
 
+    <style name="AppTheme.ListOfHeadlines" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#2e01df</item>
+        <item name="colorPrimaryDark">#b99595</item>
+        <item name="colorAccent">@color/colorHeading1</item>
+        <item name="android:background">@color/colorBackground</item>
+        <item name="android:textColor">@color/colorForeground</item>
+    </style>
+
 </resources>

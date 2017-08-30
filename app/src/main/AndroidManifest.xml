@@ -51,6 +51,7 @@
             android:name=".PopupTips"
             android:label="Tips of the day"
             android:theme="@style/AppTheme.CustomTheme" />
+
         <activity android:name=".Admin" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -69,7 +70,10 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".TrainReading" />
         <activity android:name=".MCQ" />
-        <activity android:name=".ListOfHeadings"></activity>
+        <activity
+            android:name=".ListOfHeadings"
+            android:label="List of Headings"
+            android:theme="@style/AppTheme.ListOfHeadlines" />
     </application>
 
 </manifest>

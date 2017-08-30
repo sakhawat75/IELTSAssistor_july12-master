@@ -4,5 +4,10 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorWhite">#fff</color>
-    <color name="colorMajenda">#119078</color>
+    <color name="colorForeground">#F3CDBA</color>
+    <color name="colorForeground2">#f4b799</color>
+    <color name="colorHeading1">#E80F46</color>
+    <color name="colorTeal">#119078</color>
+    <color name="heading2">#AF7AC5</color>
+    <color name="colorBackground">#252138</color>
 </resources>
