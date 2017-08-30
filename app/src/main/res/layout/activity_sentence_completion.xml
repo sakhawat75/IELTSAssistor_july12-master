@@ -10,18 +10,22 @@
 
     <Button
         android:id="@+id/useful_InfoOfSentenceCompletion"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:onClick="info"
         android:text="Useful Info and Tricks" />
 
 
     <Button
         android:id="@+id/PracticeSentenceCompletion"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:onClick="practice"
         android:text="Practice Sentence completion" />
 </LinearLayout>

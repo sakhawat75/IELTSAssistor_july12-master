@@ -3,13 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/scrollView"
     android:fillViewport="true" >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:id="@+id/linearLayout"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         tools:context="team_uganda.ieltsassistor.PracticeSentenceCompletion"
         android:orientation="vertical">
 
@@ -18,157 +25,269 @@
             android:id="@+id/headlineMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="19dp"
             android:text="Read the following passage and complete the sentences below:" />
+
         <TextView
             android:id="@+id/passagetitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="19dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="15dp"
-            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
             android:textColor="#00000d"
-            android:layout_below="@+id/headlineMessage"
             android:text="3D heart printed using multiple imaging techniques" />
 
         <TextView
             android:id="@+id/stringPassage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="19dp"
-            android:layout_below="@+id/passagetitle"
-            android:text="birokto" />
+            android:layout_marginTop="20dp"
+            android:lineSpacingMultiplier="1.1"
+            android:text="" />
 
         <TextView
             android:id="@+id/questionsOfSentenceCompletion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="19dp"
-
-            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
             android:textColor="#00000d"
-            android:layout_below="@+id/stringPassage"
             android:text="Complete the sentences below. Write NO MORE THAN THREE WORDS from the passage for each answer." />
 
         <TextView
             android:id="@+id/questions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="19dp"
-
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#555"
-            android:layout_below="@+id/questionsOfSentenceCompletion"
-            android:text="Questions chole esho!" />
-
+            android:text="" />
 
         <LinearLayout
-            android:id="@+id/LayoutSentenceCompletionOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-            android:orientation="horizontal"
-            android:layout_below="@id/questions"
-            android:weightSum="5">
-
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:id="@+id/LayoutSentenceCompletionOne"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="1 : " />
+                android:orientation="horizontal"
+                android:weightSum="20" >
 
-            <EditText
-                android:layout_width="0dp"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="1 : " />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="18"
+                    android:maxLines="1"
+                    android:hint="No more than 3 words"
+                    android:id="@+id/questionOneSentenceCompletion"/>
+
+                <Button
+                    android:id="@+id/userAns1"
+                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="done" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/layout_small_margin"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:hint="No more than 3 words"
-                android:id="@+id/questionOneSentenceCompletion"/>
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/scResult1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/LayoutSentenceCompletionTwo"
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/layout_medium_margin"
             android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-            android:orientation="horizontal"
-            android:layout_below="@id/questions"
-            android:weightSum="5">
-
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="2 : " />
+                android:orientation="horizontal"
+                android:weightSum="20" >
 
-            <EditText
-                android:layout_width="0dp"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="2 : " />
+
+                <EditText
+                    android:id="@+id/questionTwoSentenceCompletion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="18"
+                    android:hint="No more than 3 words"
+                    android:maxLines="1" />
+
+                <Button
+                    android:id="@+id/userAns2"
+                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="done" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:hint="No more than 3 words"
-                android:id="@+id/questionTwoSentenceCompletion"/>
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/scResult2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_small_margin"
+                    android:text=""
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
-            android:id="@+id/LayoutSentenceCompletionThree"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_medium_margin"
+            android:orientation="vertical" >
 
-            android:orientation="horizontal"
-            android:layout_below="@id/questions"
-            android:weightSum="5">
-
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="3 : " />
+                android:orientation="horizontal"
 
-            <EditText
-                android:layout_width="0dp"
+                android:weightSum="20">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="3 : " />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="18"
+                    android:maxLines="1"
+                    android:hint="No more than 3 words"
+                    android:id="@+id/questionThreeSentenceCompletion"/>
+
+                <Button
+                    android:id="@+id/userAns3"
+                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="done" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:hint="No more than 3 words"
-                android:id="@+id/questionThreeSentenceCompletion"/>
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/scResult3"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_small_margin"
+                    android:text=""
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
-            android:id="@+id/LayoutSentenceCompletionFour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_medium_margin"
+            android:orientation="vertical" >
 
-            android:orientation="horizontal"
-            android:layout_below="@id/questions"
-            android:weightSum="5">
-
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="4 : " />
+                android:orientation="horizontal"
+                android:weightSum="20" >
 
-            <EditText
-                android:layout_width="0dp"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="4 : " />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="18"
+                    android:maxLines="1"
+                    android:hint="No more than 3 words"
+                    android:id="@+id/questionFourSentenceCompletion"/>
+
+                <Button
+                    android:id="@+id/userAns4"
+                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="done" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:hint="No more than 3 words"
-                android:id="@+id/questionFourSentenceCompletion"/>
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/scResult4"
+                    android:layout_marginTop="@dimen/layout_small_margin"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
         </LinearLayout>
 
-
-
-
-
-
-
+        <Button
+            android:id="@+id/finishSentenceActivity"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/layout_large_margin"
+            android:layout_marginBottom="@dimen/layout_large_margin"
+            android:text="finish" />
 
     </LinearLayout>
 </ScrollView>

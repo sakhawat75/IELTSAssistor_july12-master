@@ -74,14 +74,22 @@
             android:name=".ListOfHeadings"
             android:label="List of Headings"
             android:theme="@style/AppTheme.ListOfHeadlines" />
+
         <activity android:name=".SentenceCompletion"
             android:label="Sentence Completion"/>
+
         <activity android:name=".PracticeSentenceCompletion"
-            android:label="Practice Sentence Completion"/>
+            android:label="Practice Sentence Completion"
+            android:windowSoftInputMode="stateHidden" />
+
         <activity android:name=".ClassificationSelection"
             android:label="Classification Selection"/>
+
         <activity android:name=".TrueFalseNGSelection"
             android:label="True False NG"/>
+
+        <activity android:name=".UsefulInfoOfSentenceCompletion"
+            android:label="Usefull Info of Sentence Completion" />
     </application>
 
 </manifest>

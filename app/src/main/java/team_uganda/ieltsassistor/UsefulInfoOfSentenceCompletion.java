@@ -21,6 +21,7 @@ public class UsefulInfoOfSentenceCompletion extends AppCompatActivity {
             "\n" +
             "Note that if you are asked to complete sentence with no more than two words, " +
             "you can write one or two words.\n\n";
+
     private String tricksToAnswer = "Answering strategy:\n" +
             "\n" +
             "1. Read the text.\n" +
@@ -57,7 +58,8 @@ public class UsefulInfoOfSentenceCompletion extends AppCompatActivity {
     }
     public void back(View view)
     {
-        Intent intent = new Intent(this, SentenceCompletion.class);
-        startActivity(intent);
+        /*Intent intent = new Intent(this, SentenceCompletion.class);
+        startActivity(intent);*/
+        finish();
     }
 }
