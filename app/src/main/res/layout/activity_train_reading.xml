@@ -24,7 +24,34 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/buttonMCQ"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
+
         android:text="List Of Headings" />
+    <Button
+        android:id="@+id/buttonSentenceCompletion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonListOfHeadings"
+        android:layout_centerHorizontal="true"
+
+        android:text="Sentence Completion" />
+
+    <Button
+        android:id="@+id/buttonClassification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_below="@+id/buttonSentenceCompletion"
+        android:text="Classification" />
+    <Button
+        android:id="@+id/buttonTrueFalseNG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_below="@+id/buttonClassification"
+        android:text="True False NG" />
 
 </RelativeLayout>

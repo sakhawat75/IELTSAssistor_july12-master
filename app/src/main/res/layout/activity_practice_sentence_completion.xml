@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="team_uganda.ieltsassistor.PracticeSentenceCompletion"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/headlineMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:text="Read the following passage and complete the sentences below:" />
+        <TextView
+            android:id="@+id/passagetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"
+            android:textSize="15dp"
+            android:textColor="#00000d"
+            android:layout_below="@+id/headlineMessage"
+            android:text="3D heart printed using multiple imaging techniques" />
+
+        <TextView
+            android:id="@+id/stringPassage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:layout_below="@+id/passagetitle"
+            android:text="birokto" />
+
+        <TextView
+            android:id="@+id/questionsOfSentenceCompletion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+
+            android:textSize="15dp"
+            android:textColor="#00000d"
+            android:layout_below="@+id/stringPassage"
+            android:text="Complete the sentences below. Write NO MORE THAN THREE WORDS from the passage for each answer." />
+
+        <TextView
+            android:id="@+id/questions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+
+            android:textSize="15dp"
+            android:textColor="#555"
+            android:layout_below="@+id/questionsOfSentenceCompletion"
+            android:text="Questions chole esho!" />
+
+
+        <LinearLayout
+            android:id="@+id/LayoutSentenceCompletionOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:layout_below="@id/questions"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1 : " />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="No more than 3 words"
+                android:id="@+id/questionOneSentenceCompletion"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LayoutSentenceCompletionTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:layout_below="@id/questions"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2 : " />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="No more than 3 words"
+                android:id="@+id/questionTwoSentenceCompletion"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LayoutSentenceCompletionThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:layout_below="@id/questions"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3 : " />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="No more than 3 words"
+                android:id="@+id/questionThreeSentenceCompletion"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LayoutSentenceCompletionFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:layout_below="@id/questions"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4 : " />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="No more than 3 words"
+                android:id="@+id/questionFourSentenceCompletion"/>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

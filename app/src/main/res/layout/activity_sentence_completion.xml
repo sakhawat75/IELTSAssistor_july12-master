@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team_uganda.ieltsassistor.SentenceCompletion"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/useful_InfoOfSentenceCompletion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="info"
+        android:text="Useful Info and Tricks" />
+
+
+    <Button
+        android:id="@+id/PracticeSentenceCompletion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="practice"
+        android:text="Practice Sentence completion" />
+</LinearLayout>
