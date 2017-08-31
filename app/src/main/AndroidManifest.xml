@@ -51,7 +51,6 @@
             android:name=".PopupTips"
             android:label="Tips of the day"
             android:theme="@style/AppTheme.CustomTheme" />
-
         <activity android:name=".Admin" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -74,22 +73,26 @@
             android:name=".ListOfHeadings"
             android:label="List of Headings"
             android:theme="@style/AppTheme.ListOfHeadlines" />
-
-        <activity android:name=".SentenceCompletion"
-            android:label="Sentence Completion"/>
-
-        <activity android:name=".PracticeSentenceCompletion"
-            android:label="Practice Sentence Completion"
-            android:windowSoftInputMode="stateHidden" />
-
-        <activity android:name=".ClassificationSelection"
-            android:label="Classification Selection"/>
-
-        <activity android:name=".TrueFalseNGSelection"
-            android:label="True False NG"/>
-
-        <activity android:name=".UsefulInfoOfSentenceCompletion"
-            android:label="Usefull Info of Sentence Completion" />
+        <activity
+            android:name=".SentenceCompletion"
+            android:label="Sentence Completion" />
+        <activity
+            android:name=".UsefulInfoOfSentenceCompletion"
+            android:label="Useful info of Sentence Completion" />
+        <activity
+            android:name=".PracticeSentenceCompletion"
+            android:label="Practice Sentence Completion" />
+        <activity
+            android:name=".ClassificationSelection"
+            android:label="Classification Selection" />
+        <activity
+            android:name=".TrueFalseNGSelection"
+            android:label="True False NG" />
+        <activity android:name=".UsefulInfoOfClassificationSelection" />
+        <activity android:name=".PracticeClassificationSelection" />
+        <activity android:name=".UsefulInfoOfTrueFalseType" />
+        <activity android:name=".PracticeTrueFalseType" />
+        <activity android:name=".TrainListening"></activity>
     </application>
 
 </manifest>
