@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team_uganda.ieltsassistor.TrainWriting"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="There's only 3 tips for improving your skill: Practice, Practice and Practice. Still,  you can go through the exclusive video that illustrates the overall writing format."
+        android:textColor="#000"
+        android:textSize="20sp"
+        />
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ddf"
+        />
+
+</LinearLayout>
