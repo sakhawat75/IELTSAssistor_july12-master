@@ -9,9 +9,15 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TrainWriting extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
     public static final String API_KEY = "AIzaSyB_Zd0mqe6hjOAZzg5a9fSbpwTvEgyDlcg";
-    public static final String VIDEO_ID = "kM4lenmCDpY&list=PLOSo0A8ngEXWhD3_yisOF0qBB4e6sWx01";
+
+
+    //public static final String VIDEO_ID = "TzLyARGcTEA";
+    //public static final String VIDEO_ID_2 = "gCo9L1nLlQ0";
 
 
     @Override
@@ -20,8 +26,10 @@ public class TrainWriting extends YouTubeBaseActivity implements YouTubePlayer.O
         setContentView(R.layout.activity_train_writing);
 
         YouTubePlayerView youTubePlayerView = (YouTubePlayerView)findViewById(R.id.youtube_player);
+
         youTubePlayerView.initialize(API_KEY, this);
     }
+
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestricted) {
@@ -30,7 +38,13 @@ public class TrainWriting extends YouTubeBaseActivity implements YouTubePlayer.O
 
         if(!wasRestricted)
         {
-            youTubePlayer.cuePlaylist(VIDEO_ID);
+            List<String> listvideo = new ArrayList<>();
+            listvideo.add("TzLyARGcTEA");
+            listvideo.add("gCo9L1nLlQ0");
+            listvideo.add("YngqHl_BLOU&t=5s");
+
+            youTubePlayer.cueVideos(listvideo);
+
 
         }
     }

@@ -9,9 +9,12 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TrainSpeaking extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
     public static final String API_KEY = "AIzaSyB_Zd0mqe6hjOAZzg5a9fSbpwTvEgyDlcg";
-    public static final String VIDEO_ID = "5UF2eiPaSiQ&list=PLdawRnR9ilZDT-3hoMRe6RysQh1ef63zJ";
+    //public static final String VIDEO_ID = "5UF2eiPaSiQ&list=PLdawRnR9ilZDT-3hoMRe6RysQh1ef63zJ";
 
 
     @Override
@@ -30,7 +33,14 @@ public class TrainSpeaking extends YouTubeBaseActivity implements YouTubePlayer.
 
         if(!wasRestricted)
         {
-            youTubePlayer.cuePlaylist(VIDEO_ID);
+            List<String>videoList = new ArrayList<>();
+            videoList.add("n5ohxW5lTIs");
+            videoList.add("dzTSh7zwRIM");
+            videoList.add("8xzAB3Fe1zQ");
+            videoList.add("8xzAB3Fe1zQ");
+            videoList.add("KaK-VDFqgHc");
+            videoList.add("f5t8EQrg5dI");
+            youTubePlayer.cueVideos(videoList);
 
         }
     }
