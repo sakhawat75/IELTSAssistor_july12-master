@@ -105,6 +105,6 @@ public class TrainSpeaking extends YouTubeBaseActivity implements YouTubePlayer.
 
     @Override
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-        Toast.makeText(getApplicationContext(), "Failed to initialize", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Failed to initialize the video", Toast.LENGTH_SHORT).show();
     }
 }
