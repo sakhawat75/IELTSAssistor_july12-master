@@ -14,7 +14,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class BookOne extends AppCompatActivity {
+
     PDFView pdfView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
