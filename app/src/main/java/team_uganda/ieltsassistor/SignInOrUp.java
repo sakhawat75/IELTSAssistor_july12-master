@@ -196,6 +196,7 @@ public class SignInOrUp  extends AppCompatActivity implements View.OnClickListen
 
         if(view == textViewSignin) {
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            finish();
         }
 
         if(view == nGoogleBtn) {
