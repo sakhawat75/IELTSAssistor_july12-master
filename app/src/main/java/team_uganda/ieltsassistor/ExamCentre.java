@@ -180,8 +180,6 @@ public class ExamCentre extends AppCompatActivity {
         textViewNearestExamCentre.setBackgroundColor(getResources().getColor(R.color.colorWhite));
         string = null;
 
-
-
         //Toast.makeText(getApplicationContext(), "Location is " + string, Toast.LENGTH_LONG).show();
         //locationManager.removeUpdates(locationListener);
     }
