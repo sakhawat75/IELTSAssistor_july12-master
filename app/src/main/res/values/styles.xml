@@ -1,11 +1,11 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorSplash</item>
     </style>
 
     <style name="AppTheme.CustomTheme">
@@ -14,7 +14,7 @@
         <item name="colorPrimary">#eed369</item>
     </style>
 
-    <style name="AppTheme.ListOfHeadlines" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme.ListOfHeadlines" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">#2e01df</item>
         <item name="colorPrimaryDark">#b99595</item>
         <item name="colorAccent">@color/colorHeading1</item>
