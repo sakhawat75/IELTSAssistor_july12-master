@@ -29,12 +29,12 @@ public class BookStorage extends AppCompatActivity {
     {
         Intent intent = new Intent(BookStorage.this, BookOne.class);
         startActivity(intent);
-        Toast.makeText(getApplicationContext(),"Opening Target Band-7", Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),"Opening Target Band-7", Toast.LENGTH_LONG).show();
     }
     public void readBook2(View v)
     {
         Intent intent = new Intent(BookStorage.this, BookTwo.class);
         startActivity(intent);
-        Toast.makeText(getApplicationContext(),"Opening PAST IELTS ESSAY", Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),"Opening PAST IELTS ESSAY", Toast.LENGTH_LONG).show();
     }
 }

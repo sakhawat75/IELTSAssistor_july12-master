@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="#aac"
-        android:text="Cart books free"
+        android:text="Read books free"
         android:onClick="bookStore"
         />
 
