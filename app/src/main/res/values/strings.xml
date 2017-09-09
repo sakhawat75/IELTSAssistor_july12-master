@@ -2,4 +2,9 @@
     <string name="app_name">IELTS Assistor</string>
     <string name="fetching_tip_please_wait">Fetching Tip Please Wait</string>
     <string name="title_activity_maps">Map</string>
+    <string name="welcome_to_know_your_band_score">Welcome to know your band score!!!</string>
+    <string name="listening">Listening:</string>
+    <string name="reading">Reading:</string>
+    <string name="writing">Writing:</string>
+    <string name="speaking">Speaking:</string>
 </resources>

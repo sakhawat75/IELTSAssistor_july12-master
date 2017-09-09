@@ -3,6 +3,7 @@
     package="team_uganda.ieltsassistor">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -92,7 +93,9 @@
         <activity android:name=".PracticeClassificationSelection" />
         <activity android:name=".UsefulInfoOfTrueFalseType" />
         <activity android:name=".PracticeTrueFalseType" />
-        <activity android:name=".TrainListening"></activity>
+        <activity android:name=".TrainListening" />
+        <activity android:name=".TrainWriting" />
+        <activity android:name=".TrainSpeaking"></activity>
     </application>
 
 </manifest>

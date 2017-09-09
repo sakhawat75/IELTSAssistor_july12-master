@@ -1,5 +1,6 @@
 package team_uganda.ieltsassistor;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Geocoder;
@@ -22,16 +23,18 @@ import java.util.List;
 import java.util.Locale;
 
 public class ExamCentre extends AppCompatActivity {
-    private Button button;
+    //private Button button;
     private Button button2;
-    private TextView textView;
-    private TextView textView3;
+    private TextView textViewMyLocation;
+    private TextView textViewNearestExamCentre;
     private LocationManager locationManager;
     private LocationListener locationListener;
     String string;
     double lattitude;
     double longitude;
     Geocoder geocoder;
+
+    ProgressDialog progressDialog;
 
 
     @Override
@@ -40,38 +43,42 @@ public class ExamCentre extends AppCompatActivity {
         setContentView(R.layout.activity_exam_centre);
 
         //initialize the four objects
-        button = (Button) findViewById(R.id.buttonReading);
+       // button = (Button) findViewById(R.id.buttonReading);
         //button2 = (Button) findViewById(R.id.button2);
 
-        textView = (TextView) findViewById(R.id.textView);
-        textView3 = (TextView) findViewById(R.id.textView3);
+        textViewMyLocation = (TextView) findViewById(R.id.textViewMyLocation);
+        textViewNearestExamCentre = (TextView) findViewById(R.id.textViewNearestExamCentre);
         geocoder = new Geocoder(this, Locale.getDefault());
 
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Finding Your Current Location. Please Wait...");
+        progressDialog.setCancelable(true);
+        progressDialog.show();
+
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                textView.setText(null);
-                textView3.setText(null);
+
+                textViewMyLocation.setText(null);
+                textViewNearestExamCentre.setText(null);
                 string = null;
-
-
-
                 //string += "\n " + location.getLatitude() + " " + location.getLongitude();
-
                 //lnj = new LatLng(location.getLatitude(), location.getLongitude());
                 lattitude = location.getLatitude();
                 longitude = location.getLongitude();
                 try {
                     List<android.location.Address> addresses  = geocoder.getFromLocation(lattitude,longitude, 1);
-                    textView.append("\n " + "Your Current location: " + addresses.get(0).getAddressLine(0));
-                    textView.setBackgroundColor(getResources().getColor(R.color.colorTeal));
+                    textViewMyLocation.append("\n " + "Your Current location: " + addresses.get(0).getAddressLine(0));
+                    textViewMyLocation.setBackgroundColor(getResources().getColor(R.color.colorTeal));
                     string += "\n " +  "Your location is: " + location.getLatitude() + " " + location.getLongitude();
                     Toast.makeText(getApplicationContext(), "Your " + string, Toast.LENGTH_LONG).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
+                progressDialog.dismiss();
                 distanceCalculator();
 
 
@@ -91,6 +98,7 @@ public class ExamCentre extends AppCompatActivity {
             public void onProviderDisabled(String s) {
                 Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                 startActivity(intent);
+                finish();
             }
         };
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -107,6 +115,8 @@ public class ExamCentre extends AppCompatActivity {
             //configureButton();
 
         }
+
+        configureButton();
 
     }
 
@@ -129,11 +139,11 @@ public class ExamCentre extends AppCompatActivity {
 
         if(distance_1 < distance_2)
         {
-            textView3.setText("British Council, Sylhet");
+            textViewNearestExamCentre.setText("British Council, Sylhet");
         }
         else
         {
-            textView3.setText("IDP IELTS Sylhet office,Sylhet");
+            textViewNearestExamCentre.setText("IDP IELTS Sylhet office,Sylhet");
         }
 
     }
@@ -148,7 +158,7 @@ public class ExamCentre extends AppCompatActivity {
         }
     }
 
-    public void configureButton(View view)
+    public void configureButton()
     {
 
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -157,20 +167,18 @@ public class ExamCentre extends AppCompatActivity {
         locationManager.requestSingleUpdate("gps", locationListener, null);
         //locationManager.requestLocationUpdates("gps", 10000, 0, locationListener);
 
-        textView.setText(null);
-        textView.setBackgroundColor(getResources().getColor(R.color.colorWhite));
-        textView3.setText(null);
-        textView3.setEnabled(false);
+        textViewMyLocation.setText(null);
+        textViewMyLocation.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+        textViewNearestExamCentre.setText(null);
+        textViewNearestExamCentre.setEnabled(false);
 //        try {
-//            textView3.wait(10000);
+//            textViewNearestExamCentre.wait(10000);
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
 
-        textView3.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+        textViewNearestExamCentre.setBackgroundColor(getResources().getColor(R.color.colorWhite));
         string = null;
-
-
 
         //Toast.makeText(getApplicationContext(), "Location is " + string, Toast.LENGTH_LONG).show();
         //locationManager.removeUpdates(locationListener);

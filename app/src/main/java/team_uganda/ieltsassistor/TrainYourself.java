@@ -37,12 +37,16 @@ public class TrainYourself extends AppCompatActivity implements View.OnClickList
             startActivity(intent);
             //finish();
         } else if(v.getId() == R.id.buttonWriting) {
+            Intent intent = new Intent(getApplicationContext(), TrainWriting.class);
+            startActivity(intent);
 
         } else if (v.getId() == R.id.buttonListening) {
             Intent intent = new Intent(getApplicationContext(), TrainListening.class);
             startActivity(intent);
 
         } else if(v.getId() == R.id.buttonSpeaking){
+            Intent intent = new Intent(getApplicationContext(), TrainSpeaking.class);
+            startActivity(intent);
 
         }
     }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team_uganda.ieltsassistor.TrainSpeaking"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The more you speak the more your skill'll be improved, Go throrough the playlist to train yourself by gaining speaking strategies"
+        android:textColor="#000"
+        android:textSize="20sp"
+        />
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_playerSpeaking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ddf"
+        />
+
+</LinearLayout>

@@ -1,83 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_margin="20dp"
         android:layout_marginTop="20dp"
         tools:context="team_uganda.ieltsassistor.ExamCentre">
 
-
-
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Warning: Click GET CURRENT LOCATION first and wait a few seconds"/>
-
-
-        <Button
-            android:id="@+id/buttonReading"
-            android:layout_below="@id/tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Get Current Location"
-            android:onClick="configureButton"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            />
-        <Button
-            android:id="@+id/button2"
-            android:layout_below="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Find the path"
-            android:onClick="go"
-            android:layout_centerHorizontal="true"
-
-            android:layout_centerVertical="true"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:text="Coordinates: "
             android:textAppearance="@color/colorPrimary"
-            android:id="@+id/textView"
-            android:textSize="30dp"
-            android:layout_below="@+id/buttonReading"
-            android:layout_centerHorizontal="true"
+            android:id="@+id/textViewMyLocation"
+            android:textSize="30sp"
             android:gravity="center"
             android:background="@color/colorWhite"
-            android:textColor="@color/colorWhite"
-            />
+            android:textColor="@color/colorWhite" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="From Here, Your nearest IELTS exam centre is"
-
             android:id="@+id/textView2"
-            android:textSize="30dp"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"
             android:background="#090"
-            android:textColor="#999fff"
-            />
+            android:textColor="#999fff" />
+
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-
-            android:id="@+id/textView3"
-            android:textSize="30dp"
-            android:layout_below="@+id/textView2"
-            android:layout_centerHorizontal="true"
+            android:id="@+id/textViewNearestExamCentre"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:background="@color/colorWhite"
-            android:textColor="#321fff"
-            />
+            android:textColor="#321fff" />
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find the path"
+            android:onClick="go"
+            android:layout_gravity="center_horizontal" />
 
-
-    </RelativeLayout>
+    </LinearLayout>
