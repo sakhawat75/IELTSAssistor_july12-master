@@ -39,7 +39,8 @@ public class UsefulInfoOfClassificationSelection extends AppCompatActivity {
     }
     public void back(View view)
     {
-        Intent intent = new Intent(this, ClassificationSelection.class);
-        startActivity(intent);
+        /*Intent intent = new Intent(this, ClassificationSelection.class);
+        startActivity(intent);*/
+        finish();
     }
 }

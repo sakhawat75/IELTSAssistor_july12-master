@@ -43,7 +43,8 @@ public class UsefulInfoOfTrueFalseType extends AppCompatActivity {
     }
     public void back(View view)
     {
-        Intent intent = new Intent(this, TrueFalseNGSelection.class);
-        startActivity(intent);
+        /*Intent intent = new Intent(this, TrueFalseNGSelection.class);
+        startActivity(intent);*/
+        finish();
     }
 }

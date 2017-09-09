@@ -84,7 +84,7 @@ public class PracticeTrueFalseType extends AppCompatActivity {
                 String correctAnswer = answerSet[questionNumber];
 
                 switch (checkedId) {
-                    case R.id.radioOption1:
+                    case R.id.radioOption1TF:
                         if(correctAnswer.equals("True")) {
                             resultView.setText("Your Answer is Correct");
                         } else {
@@ -92,7 +92,7 @@ public class PracticeTrueFalseType extends AppCompatActivity {
                         }
                         break;
 
-                    case R.id.radioOption2:
+                    case R.id.radioOption2TF:
                         if(correctAnswer.equals("False")) {
                             resultView.setText("Your Answer is Correct");
                         } else {
@@ -100,7 +100,7 @@ public class PracticeTrueFalseType extends AppCompatActivity {
                         }
                         break;
 
-                    case R.id.radioOption3:
+                    case R.id.radioOption3TF:
                         if(correctAnswer.equals("Not Given")) {
                             resultView.setText("Your Answer is Correct");
                         } else {
