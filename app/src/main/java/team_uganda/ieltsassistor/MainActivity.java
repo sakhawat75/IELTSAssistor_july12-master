@@ -3,6 +3,7 @@ package team_uganda.ieltsassistor;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     Button bookStorage;
     Button tipOfTheDay;
     Button signinOrUp;
+    Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         bookStorage = (Button) findViewById(R.id.ielts_rareBooks);
         tipOfTheDay = (Button) findViewById(R.id.ielts_tipOfTheDay);
         signinOrUp = (Button) findViewById(R.id.button_signinOrSignup);
+
+        toolbar=(Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
 
 
     }
