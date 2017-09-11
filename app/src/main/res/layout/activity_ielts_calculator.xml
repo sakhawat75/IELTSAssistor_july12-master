@@ -15,7 +15,6 @@
         android:textAppearance="@color/colorPrimaryDark"
         android:background="#6d4d4d"
         android:layout_weight="1"
-
         />
 
 

@@ -1,10 +1,17 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">#c5002b</item>
+        <item name="colorAccent">@color/colorSplash</item>
+    </style>
+
+    <style name="AppTheme.Red">
+        <item name="colorPrimary">#c5002b</item>
+        <item name="colorPrimaryDark">#c5002b</item>
+        <item name="android:background">#ffffff</item>
         <item name="colorAccent">@color/colorSplash</item>
     </style>
 
@@ -18,14 +25,14 @@
         <item name="colorPrimary">#c5002b</item>
         <item name="colorPrimaryDark">#b99595</item>
         <item name="colorAccent">@color/colorHeading1</item>
-        <item name="android:background">@color/colorBackground</item>
+        <item name="android:background">#ffffff</item>
         <item name="android:textColor">@color/colorForeground</item>
     </style>
 
-    <style name="AppTheme.Red" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">#c5002b</item>
-        <item name="colorPrimaryDark">#c5002b</item>
-        <item name="colorAccent">@color/colorSplash</item>
+    <style name="MyCardViewStyle" parent="Theme.AppCompat.Light">
+        <item name="cardCornerRadius">15dp</item>
+        <item name="cardElevation">15dp</item>
+        <item name="cardBackgroundColor">@color/grey</item>
     </style>
 
 </resources>

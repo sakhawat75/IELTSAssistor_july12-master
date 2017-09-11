@@ -11,4 +11,5 @@
     <color name="colorTeal">#119078</color>
     <color name="heading2">#AF7AC5</color>
     <color name="colorBackground">#252138</color>
+    <color name="grey">#eeeeee</color>
 </resources>
